@@ -25,7 +25,7 @@ O recurso escolhido para automatização foi um **Amazon S3 Bucket**, um serviç
 
 O template YAML define o recurso e suas propriedades, garantindo que o acesso público seja totalmente bloqueado, conforme as melhores práticas de segurança (Princípio do Privilégio Mínimo).
 
-**Caminho do Arquivo:** [`templates/s3-bucket-seguro.yaml`][Link para o arquivo templates/s3-bucket-seguro.yaml no seu repositório]
+**Caminho do Arquivo:** [`templates/s3-bucket-seguro.yaml`][templates/s3-bucket-seguro.yaml]
 
 | Seção do Template | Destaque e Função |
 | :--- | :--- |
