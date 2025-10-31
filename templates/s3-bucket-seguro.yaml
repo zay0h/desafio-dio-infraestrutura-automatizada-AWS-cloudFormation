@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Template IaC para o Desafio DIO. Cria um Amazon S3 Bucket com configurações 
+  de segurança que bloqueiam acesso público, seguindo o princípio de Privilégio Mínimo.
+
+Resources:
+  DIOSecureBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+      Tags:
+        - Key: Environment
+          Value: Dev-Teste
+        - Key: Project
+          Value: DIO-CloudFormation
+
+Outputs:
+  BucketName:
+    Description: Nome do S3 Bucket criado (seria gerado automaticamente pela AWS)
+    Value: !Ref DIOSecureBucket
